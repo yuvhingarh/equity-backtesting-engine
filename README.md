@@ -4,7 +4,7 @@ Backtesting engine testing momentum and mean reversion trading strategies across
 
 ## Strategies
 
-**Momentum** — buys the top 5 stocks by 12-month return each month. Based on Jegadeesh and Titman (1993).
+**Momentum Strategy** — buys the top 5 stocks by 12-month return each month. Based on Jegadeesh and Titman (1993).
 
 **Mean Reversion** — buys the 5 most oversold stocks each month using z-score analysis.
 
@@ -29,6 +29,14 @@ All three strategies outperformed SPY on both return and risk-adjusted basis on 
 | Mean Reversion | 21.03% | 0.77 | -29.06% |
 | Combined | 20.60% | 0.86 | -21.95% |
 | SPY Benchmark | 13.30% | 0.65 | -33.72% |
+
+## Limitations
+
+- Test period starts March 2024 (not January 2023) due to the 12 month momentum lookback requirement
+- Strong 2023-2024 bull market (AI boom) likely inflated results, momentum strategies benefit from trending markets
+- Training period includes COVID crash (March 2020) which may have influenced strategy parameters
+- No transaction costs modeled, real world returns would be lower
+- Universe limited to 20 large cap stocks
 
 ## Built With
 
